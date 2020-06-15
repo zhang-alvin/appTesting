@@ -13,14 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Get Repo Code
-        id: get_repo_code
+      - name: LFS-warning
         uses: ActionsDesk/lfs-warning@v1.1
-
-      - name: LFS Warning
-        id: lfs_warning
-        uses: ./
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          filesizelimit: 1024 # 10MB
+          # file size limit threshold
+          filesizelimit: 1024 # default is 10485760
