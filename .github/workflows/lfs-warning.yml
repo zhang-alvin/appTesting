@@ -1,0 +1,5 @@
+- name: LFS-warning
+  uses: ActionsDesk/lfs-warning@v1.1
+  with:
+    # file size limit threshold
+    filesizelimit: 1024 # default is 10485760
